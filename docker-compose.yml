@@ -1,0 +1,20 @@
+version: '2'
+
+#volumes:
+#  jenkins_home:
+
+services:
+  sonar:
+    image: sonarqube:latest
+    ports:
+     - "9000:9000"
+     - "9092:9092"
+  jenkins:
+    image: iflowfor8hours/jenkins2
+    ports:
+     - "8080:8080"
+     - "50000:50000"
+    links:
+     - sonar
+    #volumes:
+    #  - jenkins_home:/var/jenkins_home
