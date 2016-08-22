@@ -10,7 +10,7 @@ services:
      - "9000:9000"
      - "9092:9092"
   jenkins:
-    image: iflowfor8hours/jenkins2
+    image: iflowfor8hours/jenkins2-pipeline-demo
     ports:
      - "8080:8080"
      - "50000:50000"
